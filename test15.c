@@ -1,21 +1,21 @@
 #include <stdio.h>
 
-void larger(int a, int b)
+int add(int a, int b)
 {
-    if ( a < b )
-        printf("較大值是 %d \n", b);
-    else if ( a > b)
-        printf("較大值是 %d \n", a);
-    else
-        printf("兩數值相等 \n");
+    int sum = 0;
+    sum = a + b;
+    return sum;
 
 }
 int main()
 {
-    int i, j;
+    int x, y;
+    int total = 0;
+
     printf("請輸入兩數值 \n ==> ");
-    scanf("%d %d",&i,&j);
-    larger(i,j);
+    scanf("%d %d",&x,&y);
+    total = add(x, y);
+    printf("%d + %d = %d\n", x, y, total);
     getchar();
     return 0;
 }
